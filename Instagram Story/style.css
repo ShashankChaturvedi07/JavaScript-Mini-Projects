@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color:#fff ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card {
+    height: 440px;
+    width: 320px;
+    background-color: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #000;
+
+    /* because we gave #full-screen position- absolute so we have to gave it parent element relative property */
+    position: relative; 
+
+}
+
+#stories {
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid #efd7d7;
+    padding: 15px;
+
+    /* multiple story circle ko ek hi line me lane ke liye and use scrolable banane ke liye*/
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* isse scroll bar wala icon hat jayega */
+#stories::-webkit-scrollbar{
+    display: none;   
+}
+
+.story {
+    border: 3px solid #f5a5a5;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    
+    /* img jab circle se bahar nikle to */
+    overflow: hidden;
+    /* isse sabhi cicrle ek lin em ayenge */
+    display: inline-block;  
+}
+
+.story img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#full-screen {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    display: none;
+}
+
