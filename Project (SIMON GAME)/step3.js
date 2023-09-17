@@ -50,8 +50,8 @@ function levelUp() {
   level++;
   h2.innerText = `Level ${level}`;
 
-  //random index choose karenge 0 se lekar 3 tak
-  let randIdx = Math.floor(Math.random() * 3);
+  //random index choose karenge 0 se lekar 4 tak
+  let randIdx = Math.floor(Math.random() * 4);
   let randColor = btns[randIdx]; // random color choose karenge
   let randBtn = document.querySelector(`.${randColor}`);
     gameSeq.push(randColor);  
